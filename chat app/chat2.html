@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2em;
+        }
+
+        #chat-box {
+            width: 400px;
+            height: 300px;
+            overflow-y: scroll;
+            border: 1px solid #ddd;
+            padding: 1em;
+            margin-bottom: 1em;
+        }
+
+        #message-input {
+            width: 300px;
+            padding: 0.5em;
+        }
+
+        #send-button {
+            width: 100px;
+            padding: 0.5em;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Chat App</h1>
+    </header>
+
+    <section>
+        <div id="chat-box"></div>
+        <input type="text" id="message-input" placeholder="Type your message...">
+        <button id="send-button">Send</button>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatBox = document.getElementById('chat-box');
+            const messageInput = document.getElementById('message-input');
+            const sendButton = document.getElementById('send-button');
+
+            sendButton.addEventListener('click', function() {
+                const message = messageInput.value;
+                if (message.trim() !== '') {
+                    appendMessage('You', message);
+                    messageInput.value = '';
+                }
+            });
+
+            function appendMessage(sender, message) {
+                const newMessage = document.createElement('p');
+                newMessage.textContent = `${sender}: ${message}`;
+                chatBox.appendChild(newMessage);
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
+        });
+    </script>
+
+</body>
+</html>

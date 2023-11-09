@@ -6,7 +6,7 @@
     
 }
 body{
-    background-color: rgb(53, 53, 53);
+    background-color: #fff;
     display: flex;
     height: 100dvh;
     align-items: end;
@@ -31,7 +31,7 @@ body{
     margin-top: 16px;
     
 }
-.contaner p{
+.contaner footer{
     text-align: center;
     grid-row:3/4 ;
     grid-column: 1/5;
