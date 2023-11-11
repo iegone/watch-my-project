@@ -18,6 +18,24 @@
             text-align: center;
             padding: 1em 0;
         }
+        .search-bar{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+        }
+        .search-bar button{
+            width: 40px;
+            height: 22px;
+            color: white;
+            border: none;
+            background-color: #45a049 ;
+        }
+        .search-bar input{
+            height: 17px;
+            width: auto;
+        }
 
         section {
             display: grid;
@@ -43,12 +61,47 @@
             width: 100%;
             bottom: 0;
         }
+
+        select{
+            background-color: transparent;
+            border: none;
+            color: #fff;
+        }
+        option{
+            text-align: center;
+            
+        }
+        .lestbar {
+            padding-inline: 20px;
+        }
+        
+
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Your E-Commerce Store</h1>
+        <div class="search-bar">
+        <input type="text"> <button>GO</button>
+        </div>
+         <h1>Your E-Commerce Store</h1>
+
+         <div class="lestbar">
+        <select name="home" id="">
+            <option value="">test</option>
+            <option value="">sidebar</option>
+        </select>
+       <select name="home" id="">
+            <option value="">code</option>
+            <option value="">sidebar</option>
+        </select><select name="home" id="">
+            <option value="">git</option>
+            <option value="">sidebar</option>
+        </select><select name="home" id="">
+            <option value="">vs</option>
+            <option value="">sidebar</option>
+        </select>
+        </div>
     </header>
 
     <section>
